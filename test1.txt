@@ -1,0 +1,127 @@
+
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols:
+  [32m+[0m create
+[0m
+Terraform will perform the following actions:
+
+[1m  # module.container["grafana"].docker_container.app_container[0][0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "docker_container" "app_container" {
+      [32m+[0m [0m[1m[0mattach[0m[0m           = false
+      [32m+[0m [0m[1m[0mbridge[0m[0m           = (known after apply)
+      [32m+[0m [0m[1m[0mcommand[0m[0m          = (known after apply)
+      [32m+[0m [0m[1m[0mcontainer_logs[0m[0m   = (known after apply)
+      [32m+[0m [0m[1m[0mentrypoint[0m[0m       = (known after apply)
+      [32m+[0m [0m[1m[0menv[0m[0m              = (known after apply)
+      [32m+[0m [0m[1m[0mexit_code[0m[0m        = (known after apply)
+      [32m+[0m [0m[1m[0mgateway[0m[0m          = (known after apply)
+      [32m+[0m [0m[1m[0mhostname[0m[0m         = (known after apply)
+      [32m+[0m [0m[1m[0mid[0m[0m               = (known after apply)
+      [32m+[0m [0m[1m[0mimage[0m[0m            = (known after apply)
+      [32m+[0m [0m[1m[0minit[0m[0m             = (known after apply)
+      [32m+[0m [0m[1m[0mip_address[0m[0m       = (known after apply)
+      [32m+[0m [0m[1m[0mip_prefix_length[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0mipc_mode[0m[0m         = (known after apply)
+      [32m+[0m [0m[1m[0mlog_driver[0m[0m       = "json-file"
+      [32m+[0m [0m[1m[0mlogs[0m[0m             = false
+      [32m+[0m [0m[1m[0mmust_run[0m[0m         = true
+      [32m+[0m [0m[1m[0mname[0m[0m             = (known after apply)
+      [32m+[0m [0m[1m[0mnetwork_data[0m[0m     = (known after apply)
+      [32m+[0m [0m[1m[0mread_only[0m[0m        = false
+      [32m+[0m [0m[1m[0mremove_volumes[0m[0m   = true
+      [32m+[0m [0m[1m[0mrestart[0m[0m          = "no"
+      [32m+[0m [0m[1m[0mrm[0m[0m               = false
+      [32m+[0m [0m[1m[0msecurity_opts[0m[0m    = (known after apply)
+      [32m+[0m [0m[1m[0mshm_size[0m[0m         = (known after apply)
+      [32m+[0m [0m[1m[0mstart[0m[0m            = true
+      [32m+[0m [0m[1m[0mstdin_open[0m[0m       = false
+      [32m+[0m [0m[1m[0mtty[0m[0m              = false
+
+      [32m+[0m [0mhealthcheck {
+          [32m+[0m [0m[1m[0minterval[0m[0m     = (known after apply)
+          [32m+[0m [0m[1m[0mretries[0m[0m      = (known after apply)
+          [32m+[0m [0m[1m[0mstart_period[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0mtest[0m[0m         = (known after apply)
+          [32m+[0m [0m[1m[0mtimeout[0m[0m      = (known after apply)
+        }
+
+      [32m+[0m [0mlabels {
+          [32m+[0m [0m[1m[0mlabel[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0mvalue[0m[0m = (known after apply)
+        }
+
+      [32m+[0m [0mports {
+          [32m+[0m [0m[1m[0mexternal[0m[0m = 3001
+          [32m+[0m [0m[1m[0minternal[0m[0m = 3000
+          [32m+[0m [0m[1m[0mip[0m[0m       = "0.0.0.0"
+          [32m+[0m [0m[1m[0mprotocol[0m[0m = "tcp"
+        }
+
+      [32m+[0m [0mvolumes {
+          [32m+[0m [0m[1m[0mcontainer_path[0m[0m = "/etc/grafana"
+          [32m+[0m [0m[1m[0mvolume_name[0m[0m    = "grafana-1-volume"
+        }
+      [32m+[0m [0mvolumes {
+          [32m+[0m [0m[1m[0mcontainer_path[0m[0m = "/var/lib/grafana"
+          [32m+[0m [0m[1m[0mvolume_name[0m[0m    = "grafana-0-volume"
+        }
+    }
+
+[1m  # module.container["grafana"].docker_volume.container_volume[0][0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "docker_volume" "container_volume" {
+      [32m+[0m [0m[1m[0mdriver[0m[0m     = (known after apply)
+      [32m+[0m [0m[1m[0mid[0m[0m         = (known after apply)
+      [32m+[0m [0m[1m[0mmountpoint[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0mname[0m[0m       = "grafana-0-volume"
+    }
+
+[1m  # module.container["grafana"].docker_volume.container_volume[1][0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "docker_volume" "container_volume" {
+      [32m+[0m [0m[1m[0mdriver[0m[0m     = (known after apply)
+      [32m+[0m [0m[1m[0mid[0m[0m         = (known after apply)
+      [32m+[0m [0m[1m[0mmountpoint[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0mname[0m[0m       = "grafana-1-volume"
+    }
+
+[1m  # module.container["grafana"].random_string.random[0][0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "random_string" "random" {
+      [32m+[0m [0m[1m[0mid[0m[0m          = (known after apply)
+      [32m+[0m [0m[1m[0mlength[0m[0m      = 4
+      [32m+[0m [0m[1m[0mlower[0m[0m       = true
+      [32m+[0m [0m[1m[0mmin_lower[0m[0m   = 0
+      [32m+[0m [0m[1m[0mmin_numeric[0m[0m = 0
+      [32m+[0m [0m[1m[0mmin_special[0m[0m = 0
+      [32m+[0m [0m[1m[0mmin_upper[0m[0m   = 0
+      [32m+[0m [0m[1m[0mnumber[0m[0m      = true
+      [32m+[0m [0m[1m[0mresult[0m[0m      = (known after apply)
+      [32m+[0m [0m[1m[0mspecial[0m[0m     = false
+      [32m+[0m [0m[1m[0mupper[0m[0m       = false
+    }
+
+[1m  # module.image["grafana"].docker_image.container_image[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "docker_image" "container_image" {
+      [32m+[0m [0m[1m[0mid[0m[0m     = (known after apply)
+      [32m+[0m [0m[1m[0mlatest[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0mname[0m[0m   = "grafana/grafana"
+      [32m+[0m [0m[1m[0moutput[0m[0m = (known after apply)
+    }
+
+[0m[1mPlan:[0m 5 to add, 0 to change, 0 to destroy.[0m
+[0m
+[1mChanges to Outputs:[0m
+  [32m+[0m [0m[1m[0mapplication_access[0m[0m = [
+      [32m+[0m [0m[
+          [32m+[0m [0m{
+              [32m+[0m [0mgrafana = {
+                  [32m+[0m [0mapplication_access = (known after apply)
+                }
+            },
+        ],
+    ][0m
+
+------------------------------------------------------------------------
+
+Note: You didn't specify an "-out" parameter to save this plan, so Terraform
+can't guarantee that exactly these actions will be performed if
+"terraform apply" is subsequently run.
+
